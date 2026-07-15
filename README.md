@@ -1,68 +1,77 @@
-# DataMining_Praktikum
-Dashboard Klasifikasi Performa Penanganan COVID-19 Global
+# 🌍 Dashboard Klasifikasi Performa Penanganan COVID-19 Global
 
-Aplikasi berbasis web (web-dashboard) interaktif yang memanfaatkan Machine Learning untuk mengklasifikasikan tingkat keberhasilan penanganan pandemi COVID-19 di 187 negara.
+Aplikasi web interaktif berbasis **Machine Learning** untuk mengklasifikasikan tingkat keberhasilan penanganan pandemi COVID-19 di **187 negara**.
 
-Proyek ini dibangun menggunakan Python dan Streamlit, dengan mengimplementasikan algoritma Decision Tree dan Random Forest untuk mengelompokkan negara ke dalam 3 kategori performa: Sangat Baik, Menengah, dan Kritis.
+Proyek ini dibangun menggunakan **Python** dan **Streamlit**, dengan mengimplementasikan algoritma **Decision Tree** dan **Random Forest** untuk mengelompokkan negara ke dalam 3 kategori performa: **Sangat Baik**, **Menengah**, dan **Kritis**.
 
-Deskripsi Proyek
+---
+
+## 📖 Deskripsi Proyek
 
 Bagaimana kita bisa menilai apakah suatu negara berhasil atau kewalahan dalam menangani pandemi? Menggunakan metrik absolut (seperti total jumlah kasus) seringkali bias terhadap negara berpopulasi besar.
 
-Proyek ini memecahkan masalah tersebut dengan melakukan Feature Engineering—mengubah data mentah menjadi rasio proporsional—lalu melatih model Machine Learning untuk menemukan batas logis kedaruratan suatu wilayah tanpa mengalami kebocoran data (Data Leakage).
+Proyek ini memecahkan masalah tersebut dengan melakukan **Feature Engineering** (mengubah data mentah menjadi rasio proporsional), lalu melatih model Machine Learning untuk menemukan batas logis kedaruratan suatu wilayah tanpa mengalami kebocoran data (**Data Leakage**).
 
-Sistem ini disusun menggunakan arsitektur multi-file yang mensimulasikan alur kerja CRISP-DM (Data Understanding -> Preprocessing -> Modeling -> Visualization), menjadikannya sangat modular dan mudah dikembangkan secara ilmiah.
+Sistem ini disusun menggunakan arsitektur multi-file yang mensimulasikan alur kerja **CRISP-DM**:
 
-Fitur Utama
+```
+Data Understanding → Preprocessing → Modeling → Visualization
+```
 
-Data Understanding: Pratinjau data mentah metrik COVID-19 dari 187 negara beserta statistik deskriptifnya.
+Arsitektur ini menjadikan sistem sangat modular dan mudah dikembangkan secara ilmiah.
 
-Preprocessing Transparan: Sistem memperlihatkan secara langsung aturan rekayasa fitur (labeling) untuk target klasifikasi.
+---
 
-Modeling Interaktif: Pengguna dapat memilih algoritma (Decision Tree / Random Forest) dan mengatur hyperparameter (seperti Max Depth dan n_estimators) secara real-time via sidebar.
+## ✨ Fitur Utama
 
-Visualisasi Prediksi: Menampilkan grafik evaluasi Confusion Matrix, Scatter Plot pemetaan negara, dan render visual diagram Pohon Keputusan (Decision Logic).
+- **Data Understanding** — Pratinjau data mentah metrik COVID-19 dari 187 negara beserta statistik deskriptifnya.
+- **Preprocessing Transparan** — Sistem memperlihatkan secara langsung aturan rekayasa fitur (labeling) untuk target klasifikasi.
+- **Modeling Interaktif** — Pengguna dapat memilih algoritma (Decision Tree / Random Forest) dan mengatur hyperparameter (seperti `Max Depth` dan `n_estimators`) secara real-time via sidebar.
+- **Visualisasi Prediksi** — Menampilkan grafik evaluasi *Confusion Matrix*, *Scatter Plot* pemetaan negara, dan render visual diagram Pohon Keputusan (*Decision Logic*).
 
-Teknologi yang Digunakan
+---
 
-Bahasa Pemrograman: Python 3.x
+## 🛠️ Teknologi yang Digunakan
 
-Front-end / Antarmuka: Streamlit
+| Kategori | Teknologi |
+|---|---|
+| Bahasa Pemrograman | Python 3.x |
+| Front-end / Antarmuka | Streamlit |
+| Machine Learning | Scikit-Learn (Decision Tree, Random Forest) |
+| Manipulasi Data | Pandas, NumPy |
+| Visualisasi Data | Matplotlib, Seaborn |
 
-Machine Learning: Scikit-Learn (Decision Tree, Random Forest)
+---
 
-Manipulasi Data: Pandas, NumPy
+## 🚀 Cara Menjalankan Aplikasi (Lokal)
 
-Visualisasi Data: Matplotlib, Seaborn
+### 1. Clone repositori ini
 
-Cara Menjalankan Aplikasi (Lokal)
-
-Clone repositori ini:
-
+```bash
 git clone https://github.com/username-anda/nama-repo-ini.git
 cd nama-repo-ini
+```
 
+### 2. Install library yang dibutuhkan
 
-Install library yang dibutuhkan:
-
+```bash
 pip install streamlit pandas numpy scikit-learn matplotlib seaborn
+```
 
+### 3. Jalankan server Streamlit
 
-Jalankan server Streamlit:
-
+```bash
 streamlit run app.py
+```
 
+Aplikasi akan otomatis terbuka di browser melalui [http://localhost:8501](http://localhost:8501)
 
-Aplikasi akan otomatis terbuka di browser melalui http://localhost:8501.
+---
 
-Pengembang
+## 👥 Pengembang
 
 Proyek analisis dan pengembangan sistem pendukung keputusan ini dikembangkan secara kolaboratif oleh:
 
-Iqbal Al Anshori
-
-Wasis Wibisono
-
-M. Adrian A.F
-
-Dibuat untuk pemenuhan tugas riset praktikum Data Mining dan Machine Learning.
+- **Iqbal Al Anshori**
+- **Wasis Wibisono**
+- **M. Adrian A.F**
