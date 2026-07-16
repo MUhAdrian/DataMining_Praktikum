@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os 
 
 # Mengimpor modul/file proses yang akan kita buat
 import tahap1_understanding
@@ -11,7 +12,12 @@ st.set_page_config(page_title="Dashboard COVID-19", layout="wide")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("country_wise_latest.csv")
+   
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    
+    FILE_PATH = os.path.join(BASE_DIR, "country_wise_latest.csv")
+    
+    return pd.read_csv(FILE_PATH)
 
 # Memuat data mentah
 df_raw = load_data()
